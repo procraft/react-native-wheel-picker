@@ -4,7 +4,6 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import WheelCurvedPicker from './WheelCurvedPicker'
 const PickerItem = WheelCurvedPicker.Item
-import _ from 'lodash'
 
 const styles = {
   picker: {
@@ -42,7 +41,7 @@ export default class Picker extends Component {
       <WheelCurvedPicker
         {...props}
         style={[styles.picker, style]}
-        itemStyle={_.assign({}, styles.picker__item, itemStyle)}
+        itemStyle={[styles.picker__item, itemStyle]}
         selectedValue={this.state.selectedValue}
         onValueChange={(value) => {
           this.setState({ selectedValue: value })

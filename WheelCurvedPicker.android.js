@@ -6,9 +6,9 @@ import PropTypes from 'prop-types'
 import {
 	View,
 	ColorPropType,
+	StyleSheet,
 	requireNativeComponent,
 } from 'react-native';
-import _ from 'lodash';
 
 
 const defaultItemStyle = { color: 'white', fontSize: 26 };
@@ -67,7 +67,7 @@ class WheelCurvedPicker extends React.Component {
 			items.push({value: child.props.value, label: child.props.label});
 		});
 
-    let itemStyle = _.assign({}, defaultItemStyle, props.itemStyle);
+    let itemStyle = StyleSheet.flatten([defaultItemStyle, props.itemStyle]);
 		let textSize = itemStyle.fontSize
 		let textColor =itemStyle.color
 

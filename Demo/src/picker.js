@@ -38,7 +38,7 @@ export default class PickerContainer extends Component {
     return (
       <Picker
         style={[styles.picker, this.props.style]}
-        itemStyle={_.assign({}, styles.picker__item, this.props.itemStyle)}
+        itemStyle={[styles.picker__item, this.props.itemStyle]}
         selectedValue={this.state.selectedValue}
         onValueChange={(value) => {
           this.setState({ selectedValue: value })
