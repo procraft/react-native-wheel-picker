@@ -42,18 +42,15 @@ class WheelCurvedPicker extends React.Component {
 		selectedIndex: PropTypes.number,
 	}
 
+	static defaultProps = {
+		itemSpace: 20
+	}
+
+	state = this._stateFromProps(this.props)
+
 	constructor(props){
 		super(props)
 		this.state = this._stateFromProps(props)
-	}
-	getDefaultProps() {
-		return {
-			itemSpace: 20
-		}
-	}
-
-	getInitialState() {
-		return this._stateFromProps(this.props);
 	}
 
 	componentWillReceiveProps (props) {
