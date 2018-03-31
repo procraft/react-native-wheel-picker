@@ -3,7 +3,7 @@
 import React, { Component } from 'react'
 import Picker from 'react-native-wheel-picker'
 const PickerItem = Picker.Item
-import _ from 'lodash'
+import PropTypes from 'prop-types'
 
 const styles = {
   picker: {
@@ -25,9 +25,9 @@ export default class PickerContainer extends Component {
   }
 
   static propTypes = {
-    onValueChange: React.PropTypes.func,
-    pickerData: React.PropTypes.array,
-    selectedValue: React.PropTypes.any
+    onValueChange: PropTypes.func,
+    pickerData: PropTypes.array,
+    selectedValue: PropTypes.any
   }
 
   static defaultProps = {
